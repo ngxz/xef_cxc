@@ -1,0 +1,135 @@
+<!--pages/myorders/myorders.wxml-->
+<view class="page">
+  <view class="page__bd">
+  
+    <!--导航条-->  
+    <view class="navbar">  
+      <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+    </view>
+  <view class="content">
+    <!--未付款-->  
+    <view class="content-block" hidden="{{currentTab!==0}}">
+    <!--循环-->
+      <view wx:for="{{orderList.list}}" class="zhangdan_list">
+        <view class="order_no">
+          <span class="no left">订单号：{{item.ordersn}}</span>
+        </view>
+        <!--商品-->
+        <view wx:for="{{item.goodlist}}" wx:key='goodskey' wx:for-item='goods'>
+          <view class="order_img">
+            <view class="img left">
+              <image src="{{goods.thumb}}"></image>
+              <span class="name">{{goods.goods_name}}</span>
+            </view>
+            <view class="price left">
+              <view class="price_now">￥{{goods.member_goods_price}}</view>
+              <view class="price_old">￥{{goods.market_price}}</view>
+              <view class="count">x{{goods.goods_num}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="order_customer">
+          <view class="count2"><span class="price_all"> 共{{item.totalnumbers}}件商品 合计:￥{{item.totalprice}}（含运费:￥<span class="kuaidi">{{item.shippingprice}}</span>）</span></view>
+        </view>
+        <view class="order_address">
+          <image class="left" src="../../img/location.png"></image>
+          <span class="left address">地址：{{item.address}}</span>
+        </view>
+        <view class="order_phone">
+          <view class="phone left">
+            <image class='left' src='../../img/phone.png'></image>
+            <span class="tell left">电话： {{item.mobile}} {{item.username}}</span>
+          </view>
+          <view class="right status">
+
+          </view>
+        </view>
+      </view>
+    </view>  
+
+    <!--待发货-->  
+    <view class="content-block" hidden="{{currentTab!==1}}">  
+      <!--循环-->
+      <view wx:for="{{orderList.list}}" class="zhangdan_list">
+        <view class="order_no">
+          <span class="no left">订单号：{{item.ordersn}}</span>
+        </view>
+        <!--商品-->
+        <view wx:for="{{item.goodlist}}" wx:key='goodskey' wx:for-item='goods'>
+          <view class="order_img">
+            <view class="img left">
+              <image src="{{goods.thumb}}"></image>
+              <span class="name">{{goods.goods_name}}</span>
+            </view>
+            <view class="price left">
+              <view class="price_now">￥{{goods.member_goods_price}}</view>
+              <view class="price_old"><s>￥{{goods.market_price}}</s></view>
+              <view class="count">x{{goods.goods_num}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="order_customer">
+          <view class="count2"><span class="price_all"> 共{{item.totalnumbers}}件商品 合计：￥{{item.totalprice}}（含运费：￥<span class="kuaidi">0.00</span>）</span></view>
+        </view>
+        <view class="order_address">
+          <image class="left" src="../../img/location.png"></image>
+          <span class="left address">地址：{{item.address}}</span>
+        </view>
+        <view class="order_phone">
+          <view class="phone left">
+            <image class='left' src='../../img/phone.png'></image>
+            <span class="tell left">电话： {{item.mobile}} {{item.username}}</span>
+          </view>
+          <view class="right status">
+
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--待收货-->  
+    <view class="content-block" hidden="{{currentTab!==2}}">  
+      <!--循环-->
+      <view wx:for="{{orderList.list}}" class="zhangdan_list">
+        <view class="order_no">
+          <span class="no left">订单号：{{item.ordersn}}</span>
+        </view>
+        <!--商品-->
+        <view wx:for="{{item.goodlist}}" wx:key='goodskey' wx:for-item='goods'>
+          <view class="order_img">
+            <view class="img left">
+              <image src="{{goods.thumb}}"></image>
+              <span class="name">{{goods.goods_name}}</span>
+            </view>
+            <view class="price left">
+              <view class="price_now">￥{{goods.member_goods_price}}</view>
+              <view class="price_old"><s>￥{{goods.market_price}}</s></view>
+              <view class="count">x{{goods.goods_num}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="order_customer">
+          <view class="count2"><span class="price_all"> 共{{item.totalnumbers}}件商品 合计：￥{{item.totalprice}}（含运费：￥<span class="kuaidi">0.00</span>）</span></view>
+        </view>
+        <view class="order_address">
+          <image class="left" src="../../img/location.png"></image>
+          <span class="left address">地址：{{item.address}}</span>
+        </view>
+        <view class="order_phone">
+          <view class="phone left">
+            <image class='left' src='../../img/phone.png'></image>
+            <span class="tell left">电话： {{item.mobile}} {{item.username}}</span>
+          </view>
+          <view class="right status">
+
+          </view>
+        </view>
+      </view>
+    </view> 
+  
+  </view>
+
+</view>
+
+</view>
+

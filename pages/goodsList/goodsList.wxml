@@ -1,0 +1,41 @@
+<!--pages/goodsList/goodsList.wxml-->
+<view class="page">
+  <view class="page__bd">
+  
+    <!--导航条-->  
+    <view class="navbar">
+      <scroll-view scroll-x="true" style='white-space: nowrap' class="tab-h" scroll-left="{{scrollLeft}}">
+        <view style='width:33.3%;display:inline-block' wx:for="{{navbar}}" data-classid='{{item.classid}}' data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item.classname}}</view>
+      </scroll-view>
+    </view>  
+  <!--主体内容  -->
+  <view class="content">
+    <!--未付款-->  
+    <view class="content-block">
+    <!--循环-->
+      <view wx:for="{{goodsList}}" class="zhangdan_list">
+        <view class='goodsList'>
+          <image class='thumb left' src="{{item.thumb}}"></image>
+          <view class="left content2">
+            <view class="goodsTitle">{{item.goodname}}</view>
+            <view class='left price'>￥<span id="{{item.goodid}}">{{item.price}}</span></view>
+            <view class="btnBox right">
+              <view wx:if="{{item.is_ok == 1}}">
+              <button class='left' data-id="{{item.goodid}}" data-is_ok='{{item.is_ok}}' type="primary" size="mini" bindtap="status" hover-class="other-button-hover">{{status1}}</button>
+              </view>
+              <view wx:if="{{item.is_ok == 0}}">
+                <button class='left' data-id="{{item.goodid}}" data-is_ok='{{item.is_ok}}' type="warn" size="mini" bindtap="status">{{status2}}</button>
+              </view>
+              <button class='left' data-id="{{item.goodid}}" data-price='{{item.price}}' type="warn" size="mini" bindtap="changePrice">修改价格</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+  <!--模态窗口  -->
+<modal hidden="{{hiddenmodalput}}" title="请输入新价格" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+     <input class='newPrice' value='{{newPrice}}' type='text'placeholder="请输入价格" auto-focus bindinput="newPrice"/> 
+</modal>
+</view>

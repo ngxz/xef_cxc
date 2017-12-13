@@ -1,0 +1,13 @@
+/* pages/login/login.wxss */
+/*logo*/
+.logoBox{height: 150px;width: 100%;text-align: center;padding-top: 50px;}
+.logo{height: 100px;width: 100px;margin: 0 auto;border-radius: 20px;background-color: #fff;}
+.loginIcon{height: 100px;width: 100px;}
+/*form*/
+form{width: 100%;} 
+form input{height: 45px;width: 85%;border: none;margin: 0 auto;padding-left: 5%;background-color: #fff;}
+.comBox input{border-radius: 5px 5px 0 0;} 
+.mobileBox input{border-top: 1px solid #f0eff4;}
+.pwdBox input{border-top: 1px solid #f0eff4;border-radius:0 0 5px 5px;}
+/*登录按钮*/
+.login{width: 90%;margin: 20px auto;font-size: 15px;color: #fff;background-color: #c11a29;border-radius: 5px;text-align: center;}

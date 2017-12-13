@@ -1,0 +1,31 @@
+/* pages/home/home.wxss */
+/*顶部固定*/
+.topBox{position: fixed;top: 0;height: 170px;width: 100%;}
+
+.title{height: 30px;width: 100%;background-color: #c11a29;text-align: center;line-height: 30px;}
+.title span{color: #fff;font-size: 16px;}
+/*主按钮菜单*/
+.menuBox{height: 140px;background-color: #c11a29;}
+.menuBox ul{overflow: hidden;}
+.menuBox ul li{float: left;height: 100px;width: 33.33%;text-align: center;padding-top: 40px;}
+.menuBox ul li image{height: 40px;width: 40px;}
+.menuBox ul li span{display: block;margin-top: 5px;color: #fff;font-size: 15px;}
+
+/*主题内容*/
+.contentBox{height: 100%;width: 100%;margin-top: 140px;overflow-x: hidden;overflow-y: scroll;}
+/*内容按钮*/
+.conBox{height: 100px;width: 100%;background-color: #fff;margin-top: 15px;}
+.conBox ul{overflow: hidden;}
+.conBox ul li{float: left;height: 80px;width: 33.3%;text-align: center;padding: 15px 0;}
+/*.conBox ul li{border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;}*/
+.conBox ul li image{height: 40px;width: 40px;}
+.conBox ul li span{display: block;margin-top: 5px;color: #000;}
+/*todaydata*/
+.todayData{height: 150px;background-color: #fff;margin-top: 15px;}
+.todayData .tit{height: 40px;border-bottom: 1px solid #ccc;line-height: 40px;}
+.todayData .tit span{color: #000;background-position: left;background-repeat: no-repeat;margin-left: 10px;padding-left: 10px;font-size: 16px;}
+.todayData ul{overflow: hidden;}
+/*.todayData ul li:first-child{border-right: 1px solid #;}*/
+.todayData ul li{float: left;width: 50%;height: 60px;padding: 20px 0;text-align: center;}
+.todayData .txt{color: #666;font-size: 15px;}
+.todayData ul li span{display: block;font-size: 18px;font-weight: bold;margin-top: 10px;}

@@ -1,0 +1,85 @@
+<!--pages/home/home.wxml-->
+<view class='container'>
+  <!--top-->
+  <view class="topBox">
+    <!--主按钮-->
+    <view class="menuBox">
+      <ul>
+        <li>
+          <navigator url='../orderList/orderList' hover-class="none">
+            <image src='{{orderI}}'></image>
+            <span>订单</span>
+          </navigator>
+        </li>
+        <li>
+          <navigator url='../goodsList/goodsList' hover-class="none">
+            <image src='{{goodsI}}'></image>
+            <span>商品</span>
+          </navigator>
+        </li>
+        <li>
+          <navigator url='../income/income' hover-class="none">
+            <image src='{{payI}}'></image>
+            <span>账单</span>
+          </navigator>
+        </li>
+      </ul>
+    </view>
+  </view>
+  <!--总体内容-->
+  <view class="contentBox">
+    <!--功能按钮菜单-->
+    <view class="conBox">
+      <ul>
+        <!-- <li>
+          <navigator url='' hover-class="none">
+            <image src='{{tableI}}'></image>
+            <span>报表</span>
+          </navigator>
+        </li>
+        <li>
+          <navigator url='' hover-class="none">
+            <image src='{{codeI}}'></image>
+            <span>店铺二维码</span>
+          </navigator>
+        </li>
+        <li>
+          <navigator url='' hover-class="none">
+            <image src='{{manaI}}'></image>
+            <span>收银员管理</span>
+          </navigator>
+        </li> -->
+        <li>
+          <navigator url='' hover-class="none">
+            <image src='{{boxI}}'></image>
+            <span>营销活动</span>
+          </navigator>
+        </li>
+        <li>
+          <navigator url='' hover-class="none">
+            <image src='{{soI}}'></image>
+            <span>敬请期待</span>
+          </navigator>
+        </li>
+      </ul>
+    </view>
+    <!--todaydata-->
+    <view class="todayData">
+      <view class="tit">
+        <span style="background-image:url('{{lineI}}');">今日数据</span>
+      </view>
+      <view class="conData">
+        <ul>
+          <li>
+            <view class="txt">收款金额(元)</view>
+            <span>{{zhangdan.alltotalprice}}</span>
+          </li>
+          <li>
+            <view class="txt">收款笔数(笔)</view>
+            <span>{{zhangdan.allcount}}</span>
+          </li>
+        </ul>
+      </view>
+    </view>
+  </view>
+</view>

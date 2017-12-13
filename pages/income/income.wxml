@@ -1,0 +1,44 @@
+<!--pages/income/income.wxml-->
+<view class='container'>
+  <view class='navBox'>
+    <ul>
+      <li>
+         <view class="section">
+          <picker mode="date" value="{{date}}" start="2000-01-01" end="2090-12-31" bindchange="bindDateChange">
+            <view class="picker">
+              当前选择日期: {{date}}
+            </view>
+          </picker>
+        </view>
+      </li>
+    </ul>
+  </view>
+  <view class='content'>
+    <view class='incomeTotal'>
+        <view>收入(元)<span> =收款-退款</span></view>
+        <view class='num'>{{zhangdan.allcount - zhangdan.ttoalprice}}</view>
+    </view>
+    <view class='incomeShow'>
+        <view class='income'>
+          <view class='left yuan'>
+            <view class='tit'>收款金额(元)</view>
+            <view class='num'>{{zhangdan.alltotalprice}}</view>
+          </view>
+          <view class='right bi'>
+            <view class='tit'>收款笔数(笔)</view>
+            <view class='num'>{{zhangdan.allcount}}</view>
+          </view>
+        </view>
+        <view class='payout'>
+          <view class='left yuan'>
+            <view class='tit'>退款金额(元)</view>
+            <view class='num'>{{zhangdan.ttoalprice}}</view>
+          </view>
+          <view class='right bi'>
+            <view class='tit'>退款笔数(笔)</view>
+            <view class='num'>{{zhangdan.tuicount}}</view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

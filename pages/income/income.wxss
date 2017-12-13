@@ -1,0 +1,20 @@
+/* pages/income/income.wxss */
+
+/*顶部按钮  */
+.navBox{height: 40px;width: 100%;background-color: #fff;}
+.navBox ul{overflow: hidden;}
+.navBox ul li{float: left;width: 100%;text-align: center;}
+.navBox ul li span{display: block;font-size: 14px;}
+/*内容  */
+.content{width: 100%;height: 200px;margin-top: 10px;background-color: #fff;}
+.incomeTotal{height: 85px;padding: 15px;}
+.incomeTotal span{font-size: 12px;color: #999;}
+.incomeTotal .num {color: #c11a29;font-size: 26px;font-weight: bold;margin-top: 15px;}
+/*收款退款详情  */
+.incomeShow{height: 100px;width: 100%;}
+.income{overflow: hidden;}
+.income,.payout{padding: 10px;border-top: 1px solid #ccc;}
+.incomeShow .tit{font-size: 14px;}
+.income .num{margin-top: 5px;font-size: 14px;font-weight: bold;}
+.bi .num{float: right;font-size: 14px;font-weight: bold;}
+.yuan .num{font-size: 14px;font-weight: bold;}
